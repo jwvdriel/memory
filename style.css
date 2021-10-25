@@ -1,0 +1,79 @@
+body {
+    height: 100vh;
+    background-image: url("images/landkaart.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    font-family: 'Lato', sans-serif;
+    /*overflow: hidden;*/
+}
+
+.heading {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2% 0;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 245px 245px 245px 245px;
+    grid-template-rows: 270px 270px 270px;
+    border-radius: 25%;
+    justify-content: center;
+
+}
+
+.card{
+    height: 245px;
+    width: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 25%;
+    position: absolute;
+    text-transform: capitalize;
+    color: #ECAF44;
+
+}
+
+.front{
+    z-index: 2;
+    background-color: black;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: black;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card:hover  {
+    transform: rotateY(180deg);
+}
+
+.container {
+    perspective: 1000px;
+}
+
+
+
+
+
+
+
